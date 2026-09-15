@@ -33,6 +33,10 @@
 @media (max-width: 30rem) {
   .whatsapp-float { width: 3.5rem; padding: .6rem; justify-content: center; }
   .whatsapp-float span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .hero__shape--glow { top: -9rem; right: -5rem; width: 25rem; filter: blur(26px); }
+  .hero__shape--wave { right: -18rem; bottom: -14rem; width: 43rem; height: 22rem; }
+  .hero__shape--halo, .hero__shape--arc { display: none; }
+  .hero__shape--gold { top: 11rem; right: -1rem; width: 8rem; filter: blur(15px); }
 }
 
 @media (min-width: 64rem) {
@@ -81,6 +85,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
-  .hero__video { display: none; }
+  .hero__shape, .hero-visual__image { animation: none !important; }
   [data-reveal] { opacity: 1; transform: none; }
 }

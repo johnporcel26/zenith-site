@@ -7,8 +7,8 @@ const port = Number(process.env.PORT || process.argv[2] || 4173);
 const contentTypes = {
   ".avif": "image/avif", ".css": "text/css; charset=utf-8", ".gif": "image/gif",
   ".html": "text/html; charset=utf-8", ".jpg": "image/jpeg", ".jpeg": "image/jpeg",
-  ".js": "text/javascript; charset=utf-8", ".mp4": "video/mp4", ".png": "image/png",
-  ".svg": "image/svg+xml", ".webm": "video/webm", ".webp": "image/webp",
+  ".js": "text/javascript; charset=utf-8", ".png": "image/png",
+  ".svg": "image/svg+xml", ".webp": "image/webp",
   ".woff": "font/woff", ".woff2": "font/woff2"
 };
 

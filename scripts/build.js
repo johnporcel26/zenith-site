@@ -3,7 +3,7 @@ const path = require("path");
 
 const root = path.resolve(__dirname, "..");
 const dist = path.join(root, "dist");
-const runtimeDirectories = ["css", "js", "video"];
+const runtimeDirectories = ["css", "js"];
 const runtimeAssets = [
   "assets/favicon/zenith-favicon.png",
   "assets/images/logo/zenith-logo.png",
@@ -28,7 +28,7 @@ const bannerDirectories = [
   "13_Cards_Segmentos_MICTMR"
 ];
 const runtimeExtensions = new Set([
-  ".png", ".webp", ".jpg", ".jpeg", ".gif", ".avif", ".svg", ".mp4", ".webm",
+  ".png", ".webp", ".jpg", ".jpeg", ".gif", ".avif", ".svg",
   ".woff", ".woff2", ".ttf", ".otf"
 ]);
 

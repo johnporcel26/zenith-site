@@ -53,11 +53,14 @@
 
     <main id="conteudo-principal" tabindex="-1">
       <section id="hero" class="hero section" aria-labelledby="hero-title">
-        <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="Banners/01_Hero/hero-home.png" aria-hidden="true">
-          <source src="video/hero-background.mp4" type="video/mp4">
-        </video>
+        <div class="hero__background" aria-hidden="true">
+          <span class="hero__shape hero__shape--glow"></span>
+          <span class="hero__shape hero__shape--wave"></span>
+          <span class="hero__shape hero__shape--halo"></span>
+          <span class="hero__shape hero__shape--gold"></span>
+          <span class="hero__shape hero__shape--arc"></span>
+        </div>
         <div class="hero__overlay" aria-hidden="true"></div>
-        <div class="hero__ambient" aria-hidden="true"><span></span><span></span></div>
         <div class="container hero__grid">
           <div class="hero__copy" data-reveal>
             <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> Serviços financeiros de A a Z</p>

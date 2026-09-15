@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Zenith Serviços Financeiros de A a Z.">
+    <meta name="theme-color" content="#101218">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Zenith | Serviços Financeiros de A a Z">
+    <meta property="og:description" content="Zenith Serviços Financeiros de A a Z.">
+    <!-- Open Graph image: defina quando o material oficial estiver disponível. -->
+    <title>Zenith | Serviços Financeiros de A a Z</title>
+    <link rel="icon" href="assets/favicon/zenith-favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css?v=20260915c">
+    <link rel="stylesheet" href="css/variables.css?v=20260915c">
+    <link rel="stylesheet" href="css/components.css?v=20260915c">
+    <link rel="stylesheet" href="css/sections.css?v=20260915c">
+    <link rel="stylesheet" href="css/responsive.css?v=20260915c">
+  </head>
+  <body id="topo">
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+    <header class="site-header" data-site-header>
+      <div class="container site-header__content">
+        <a class="brand" href="/" aria-label="Zenith — página inicial">
+          <!-- IMAGEM EDITÁVEL: LOGO PRINCIPAL. Substitua este arquivo por assets/images/logo/zenith-logo.png. -->
+          <img src="assets/images/logo/zenith-logo.png" alt="Zenith Serviços Financeiros de A a Z" width="1192" height="520">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navegacao-principal" data-menu-toggle>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav id="navegacao-principal" class="site-nav" aria-label="Navegação principal" data-site-nav>
+          <!-- Âncoras preparadas para as seções que serão implementadas nas próximas etapas. -->
+          <ul class="site-nav__list">
+            <li><a href="#pessoa-fisica">Pessoa Física</a></li>
+            <li><a href="#pessoa-juridica">Pessoa Jurídica</a></li>
+            <li><a href="#mictmr">MICTMR</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#cta-final">Contato</a></li>
+          </ul>
+        </nav>
+        <a class="button button-primary site-header__cta" href="#perfis">Abra sua conta</a>
+      </div>
+    </header>
+
+    <main id="conteudo-principal" tabindex="-1">
+      <section id="hero" class="hero section" aria-labelledby="hero-title">
+        <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="Banners/01_Hero/hero-home.png" aria-hidden="true">
+          <source src="video/3141208-uhd_3840_2160_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__ambient" aria-hidden="true"><span></span><span></span></div>
+        <div class="container hero__grid">
+          <div class="hero__copy" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> Serviços financeiros de A a Z</p>
+            <h1 id="hero-title" class="heading heading--hero">Seja bem-vindo a um dos maiores Hubs Financeiros do Brasil!</h1>
+            <p class="hero__description">Uma conta digital simples, segura e completa para você cuidar da sua vida financeira pelo celular ou pelo internet bank.</p>
+            <div class="hero__actions">
+              <a class="button button-primary" href="#perfis">Abra sua conta <span aria-hidden="true">→</span></a>
+              <a class="button button-ghost" href="#servicos">Conheça nossas soluções <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+
+          <div class="hero-visual" data-reveal>
+            <!-- SLOT FIXO: Banners/01_Hero/hero-home.png -->
+            <img class="hero-visual__image" src="Banners/01_Hero/hero-home.png" alt="Smartphone em ambiente financeiro contemporâneo com iluminação dourada" width="1200" height="1500" loading="eager" decoding="async">
+          </div>
+        </div>
+        <div id="solucoes" class="container hero-benefits" aria-label="Soluções disponíveis">
+          <ul class="hero-benefits__grid">
+            <li class="card card--benefit"><span aria-hidden="true">✓</span> Conta digital sem burocracia</li>
+            <li class="card card--benefit"><span aria-hidden="true">✓</span> Pix e transferências</li>
+            <li class="card card--benefit"><span aria-hidden="true">✓</span> Pagamento de contas</li>
+            <li class="card card--benefit"><span aria-hidden="true">✓</span> Split de Pagamentos</li>
+            <li class="card card--benefit"><span aria-hidden="true">✓</span> Geração de boletos</li>
+            <li class="card card--benefit"><span aria-hidden="true">+</span> E muito mais!</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="perfis" class="profiles section" aria-labelledby="profiles-title">
+        <div class="container">
+          <div class="profiles__intro" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> Encontre a solução certa para você</p>
+            <h2 id="profiles-title" class="heading heading--section">Escolha como você quer chegar ao ZENITH</h2>
+            <p>Tenha acesso a soluções financeiras pensadas para sua vida pessoal, seu negócio ou sua organização.</p>
+          </div>
+
+          <div class="profiles__grid">
+            <!-- SLOT FIXO: Banners/11_Cards_Segmentos_PF/card-top-pf.png. Faixa visual superior apenas. -->
+            <a class="card profile-card profile-card--pf" href="#pessoa-fisica" aria-labelledby="pf-title" data-reveal>
+              <span class="profile-card__visual" aria-hidden="true"></span>
+              <span class="profile-card__content">
+                <span id="pf-title" class="profile-card__title">Pessoa Física</span>
+                <strong>Uma Zenith, um pensamento, VOCÊ!</strong>
+                <span class="profile-card__description">Tenha conta digital e soluções financeiras para cuidar da sua vida financeira em um só lugar.</span>
+                <span class="profile-card__cta">Conheça as soluções <span aria-hidden="true">→</span></span>
+              </span>
+            </a>
+
+            <!-- SLOT FIXO: Banners/12_Cards_Segmentos_PJ/card-top-pj.png. Faixa visual superior apenas. -->
+            <a class="card profile-card profile-card--pj" href="#pessoa-juridica" aria-labelledby="pj-title" data-reveal>
+              <span class="profile-card__visual" aria-hidden="true"></span>
+              <span class="profile-card__content">
+                <span id="pj-title" class="profile-card__title">Pessoa Jurídica</span>
+                <strong>O impulso que faltava para seu negócio decolar!</strong>
+                <span class="profile-card__description">Conta, maquininhas, crédito e soluções para ajudar sua empresa a crescer.</span>
+                <span class="profile-card__cta">Conheça as soluções <span aria-hidden="true">→</span></span>
+              </span>
+            </a>
+
+            <!-- SLOT FIXO: Banners/13_Cards_Segmentos_MICTMR/card-top-mictmr.png. Faixa visual superior apenas. -->
+            <a class="card profile-card profile-card--mictmr" href="#mictmr" aria-labelledby="mictmr-title" data-reveal>
+              <span class="profile-card__visual" aria-hidden="true"></span>
+              <span class="profile-card__content">
+                <span id="mictmr-title" class="profile-card__title">MICTMR</span>
+                <strong>A solução que faltava para você chegar ao ZENITH!</strong>
+                <span class="profile-card__description">Soluções específicas para Obreiros, Lojas e Potências.</span>
+                <span class="profile-card__cta">Conheça as soluções <span aria-hidden="true">→</span></span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="pessoa-fisica" class="personal section" aria-labelledby="personal-title">
+        <div class="container">
+          <div class="personal__hero section-banner section-banner--pf">
+            <div class="container">
+            <div class="personal__copy section-banner__content" data-reveal>
+              <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> Pessoa Física</p>
+              <h2 id="personal-title" class="heading heading--section">Uma Zenith, um pensamento, VOCÊ!</h2>
+              <p>Tenha as principais soluções financeiras em um só lugar, com uma experiência digital clara e fácil de usar.</p>
+              <div class="personal__actions">
+                <a class="button button-primary" href="#form-pessoa-fisica">Abra sua conta <span aria-hidden="true">→</span></a>
+                <!-- CONFIGURÁVEL: o destino White Label deve ser definido em ZENITH_CONFIG.gyrooLoanUrl. -->
+                <button class="button button-ghost" type="button" data-gyroo-loan>Contratar empréstimo <span aria-hidden="true">→</span></button>
+              </div>
+              <p class="personal__reassurance">Tenha as principais soluções financeiras em um só lugar.</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="personal-solutions" aria-labelledby="solutions-title">
+            <div class="personal-solutions__heading" data-reveal>
+              <p class="eyebrow">Principais soluções</p>
+              <h3 id="solutions-title" class="heading">Para deixar a vida financeira mais simples</h3>
+            </div>
+            <div class="personal-solutions__grid">
+              <article class="card solution-card" data-reveal>
+                <span class="solution-card__icon"><img src="assets/images/icons/pix.svg" alt=""></span><h4>Transferências gratuitas via Pix</h4><p>Faça suas transferências via Pix de forma rápida e prática.</p>
+              </article>
+              <article class="card solution-card" data-reveal>
+                <span class="solution-card__icon"><img src="assets/images/icons/deposit.svg" alt=""></span><h4>Depósitos</h4><p>Depósitos por QR Code, boletos e link de pagamentos.</p>
+              </article>
+              <article class="card solution-card" data-reveal>
+                <span class="solution-card__icon"><img src="assets/images/icons/payment.svg" alt=""></span><h4>Pagamentos</h4><p>Pagamento de contas e geração de boletos.</p>
+              </article>
+              <article class="card solution-card" data-reveal>
+                <span class="solution-card__icon"><img src="assets/images/icons/crypto.svg" alt=""></span><h4>Criptomoedas</h4><p>Compra, venda e movimentação de Crypto Moedas com o saldo de sua conta.</p>
+              </article>
+              <article class="card solution-card solution-card--loan" data-reveal>
+                <span class="solution-card__icon"><img src="assets/images/icons/loan.svg" alt=""></span><h4>Empréstimo por cartão</h4><p>Empréstimo imediato por cartão de crédito.</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="loan-highlight" aria-labelledby="loan-title" data-reveal>
+            <div><p class="eyebrow">Solução em destaque</p><h3 id="loan-title" class="heading">Empréstimo imediato por cartão de crédito.</h3></div>
+            <!-- CONFIGURÁVEL: o destino White Label deve ser definido em ZENITH_CONFIG.gyrooLoanUrl. -->
+            <button class="button button-primary" type="button" data-gyroo-loan>Contratar empréstimo <span aria-hidden="true">→</span></button>
+          </aside>
+
+          <section class="consulting" aria-labelledby="consulting-title">
+            <div class="consulting__intro" data-reveal>
+              <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> Consultoria exclusiva</p>
+              <h3 id="consulting-title" class="heading heading--section">Encontre as melhores soluções financeiras com a Zenith.</h3>
+              <p>Tenha acesso a nossa Consultoria Exclusiva para a contratação de seguros, financiamentos, consórcios e créditos em mais de 30 instituições parceiras da Zenith.</p>
+            </div>
+            <ul class="consulting__categories" aria-label="Categorias da consultoria">
+              <li class="card">Seguros</li><li class="card">Financiamentos</li><li class="card">Consórcios</li><li class="card">Créditos</li>
+            </ul>
+          </section>
+
+          <section class="partners" aria-labelledby="partners-title">
+            <div class="partners__heading" data-reveal><p class="eyebrow">Os melhores parceiros</p><h3 id="partners-title" class="heading">Opções para apoiar suas escolhas.</h3></div>
+            <!-- SLOT FIXO: Banners/09_Parceiros/bancos-parceiros.png -->
+            <img class="partners__asset" src="Banners/09_Parceiros/bancos-parceiros.png" alt="Logotipos das instituições parceiras Zenith" width="1800" height="600" loading="lazy" decoding="async">
+          </section>
+
+          <div id="form-servicos" class="personal-contact section-banner section-banner--support">
+            <div class="container section-banner__content" data-reveal>
+              <div><p class="eyebrow">Atendimento Zenith</p><h3 class="heading">Pronto para encontrar a solução que você procura?</h3></div>
+              <a class="button button-primary" href="#form-servicos">Entre em contato agora mesmo! <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pessoa-juridica" class="business section" aria-labelledby="business-title">
+        <div class="container">
+          <div class="business__hero section-banner section-banner--pj">
+            <div class="container">
+            <div class="business__copy section-banner__content" data-reveal>
+              <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> Zenith PJ</p>
+              <h2 id="business-title" class="heading heading--section">O impulso que faltava para seu negócio decolar!</h2>
+              <p>Maquininhas de cartão, crédito pré-aprovado e muito mais!</p>
+              <a class="button button-primary" href="#form-pessoa-juridica">Contratar agora mesmo! <span aria-hidden="true">→</span></a>
+            </div>
+            </div>
+          </div>
+
+          <div class="business-products" aria-label="Produtos Zenith PJ">
+            <!-- IMAGEM EDITÁVEL: ZENITH TAP. Arte vertical mantida proporcionalmente no card. -->
+            <article class="card product-card" data-reveal>
+              <div class="product-card__visual product-card__visual--tap"><img class="product-card__image" src="Banners/07_Zenith_TAP/zenith-tap.png" alt="Zenith TAP em smartphone" loading="lazy" decoding="async"></div>
+              <div class="product-card__content"><p class="eyebrow">Zenith TAP</p><h3>Seu celular como maquininha</h3><p>Faça de seu celular uma maquininha poderosa de cartão de crédito, débito e pix!</p><ul><li>Cartão de crédito</li><li>Cartão de débito</li><li>Pix</li></ul><a class="button button-ghost" href="#form-pessoa-juridica">Quero a Zenith TAP <span aria-hidden="true">→</span></a></div>
+            </article>
+            <!-- IMAGEM EDITÁVEL: ZENITH PRO. Arte vertical mantida proporcionalmente no card. -->
+            <article class="card product-card" data-reveal>
+              <div class="product-card__visual product-card__visual--pro"><img class="product-card__image" src="Banners/08_Zenith_PRO/zenith-pro.png" alt="Zenith PRO para estabelecimentos" loading="lazy" decoding="async"></div>
+              <div class="product-card__content"><p class="eyebrow">Zenith PRO</p><h3>Maquininha física para seu estabelecimento</h3><p>Tenha em seu estabelecimento as melhores maquininhas físicas, com juros baixos e sem burocracia.</p><a class="button button-ghost" href="#form-pessoa-juridica">Quero a Zenith PRO <span aria-hidden="true">→</span></a></div>
+            </article>
+          </div>
+
+          <section class="business-rates" aria-labelledby="rates-title" data-reveal>
+            <div><p class="eyebrow">Taxas Zenith</p><h3 id="rates-title" class="heading">Condições em destaque</h3></div>
+            <div class="business-rates__grid"><article><span>Débito</span><strong>1,59%</strong></article><article><span>Crédito à vista</span><strong>A partir de 3%</strong></article></div>
+          </section>
+
+          <aside class="business-credit" aria-labelledby="business-credit-title" data-reveal>
+            <div><p class="eyebrow">Maquininha + crédito</p><h3 id="business-credit-title" class="heading">Contrate a maquininha Zenith e tenha crédito emergencial pré-aprovado com liberação em até 24h!</h3></div>
+            <a class="button button-primary" href="#form-pessoa-juridica">Contratar agora mesmo! <span aria-hidden="true">→</span></a>
+          </aside>
+        </div>
+      </section>
+
+      <section id="mictmr" class="mictmr section" aria-labelledby="mictmr-title">
+        <div class="container">
+          <div class="mictmr__hero section-banner section-banner--mictmr">
+            <div class="container">
+              <div class="section-banner__content" data-reveal><p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> Conta MICTMR</p><h2 id="mictmr-title" class="heading heading--section">A solução que faltava para você chegar no ZENITH!</h2><p>Escolha a solução ideal para Obreiros, Lojas ou Potências.</p></div>
+            </div>
+          </div>
+          <nav class="mictmr__selector" aria-label="Escolha seu perfil MICTMR">
+            <a class="card mictmr-selector-card" href="#mictmr-obreiro"><span>01</span><strong>Obreiro</strong><small>Conta individual e soluções para sua rotina financeira.</small><b>Conheça <i aria-hidden="true">→</i></b></a>
+            <a class="card mictmr-selector-card" href="#mictmr-loja"><span>02</span><strong>Loja</strong><small>Organização financeira, pagamentos e estrutura para a loja.</small><b>Conheça <i aria-hidden="true">→</i></b></a>
+            <a class="card mictmr-selector-card" href="#mictmr-potencia"><span>03</span><strong>Potência</strong><small>Automação e controle dos recebimentos da Potência.</small><b>Conheça <i aria-hidden="true">→</i></b></a>
+          </nav>
+
+          <section id="mictmr-obreiro" class="mictmr-subsection mictmr-obreiro" aria-labelledby="obreiro-title">
+            <div class="mictmr-subsection__intro" data-reveal><p class="eyebrow">MICTMR • Obreiro</p><h3 id="obreiro-title" class="heading heading--section">Vantagens para nenhum Bode botar defeito!</h3></div>
+            <!-- IMAGEM EDITÁVEL: MICTMR OBREIRO. PLACEHOLDER EM CSS: substituir por assets/images/mictmr/mictmr-obreiro.webp quando disponível. -->
+            <div class="mictmr-benefits"><article class="card">Conta individual nominal ou bolsão<small>Converse com nosso especialista.</small></article><article class="card">Crédito pré-aprovado do valor de sua mensalidade com a loja</article><article class="card">Empréstimo imediato por cartão de crédito</article><article class="card">Transferência via Pix</article><article class="card">Transações gratuitas entre contas Zenith</article><article class="card">Depósitos por QR Code, boletos e link de pagamentos</article><article class="card">Pagamento de contas e geração de boletos</article><article class="card">Compra, venda e movimentação de Crypto Moedas com o saldo de sua conta</article></div>
+            <div class="mictmr-reinforce">Tenha as principais soluções financeiras em um só lugar!</div>
+            <div class="mictmr-actions"><a class="button button-primary" href="#form-mictmr">Abra sua conta <span aria-hidden="true">→</span></a><button class="button button-ghost" type="button" data-gyroo-loan>Contratar empréstimo <span aria-hidden="true">→</span></button></div>
+            <div class="mictmr-consulting"><p class="eyebrow">Consultoria exclusiva</p><p>Tenha acesso a nossa Consultoria Exclusiva para a contratação de seguros, financiamentos, consórcios e créditos em mais de 30 instituições parceiras da Zenith.</p><ul><li>Seguros</li><li>Financiamentos</li><li>Consórcios</li><li>Créditos</li></ul></div>
+            <div class="mictmr-partners"><p class="eyebrow">Parceiros</p><ul class="partners__grid"><li>Banco do Brasil</li><li>Itaú</li><li>BV</li><li>Bradesco</li><li>Banco Pan</li><li>DelFinance</li><li>Santander</li><li>Porto Seguro</li><li>Zurich Seguros</li></ul></div>
+            <div class="mictmr-contact" data-reveal>
+              <p class="eyebrow">Atendimento MICTMR</p>
+              <button class="button button-primary" type="button" data-config-link="mictmrContactUrl">Entre em contato agora mesmo! <span aria-hidden="true">→</span></button>
+            </div>
+          </section>
+
+          <section id="mictmr-loja" class="mictmr-subsection mictmr-loja" aria-labelledby="loja-title">
+            <div class="mictmr-subsection__intro" data-reveal><p class="eyebrow">MICTMR • Loja</p><h3 id="loja-title" class="heading heading--section">Chega de conta em nome de irmão! Organize os pagamentos de sua loja agora mesmo!</h3></div>
+            <!-- IMAGEM EDITÁVEL: MICTMR LOJA. PLACEHOLDER EM CSS: substituir por assets/images/mictmr/mictmr-loja.webp quando disponível. -->
+            <div class="mictmr-feature-grid"><article class="card"><strong>Abertura de conta em nome da loja</strong><small>com ou sem CNPJ</small></article><article class="card"><strong>Extrato completo e detalhado</strong><small>para auditoria</small></article><article class="card"><strong>Recebimento automático de mensalidades</strong><small>split</small></article><article class="card"><strong>Abertura de subcontas vinculadas</strong><small>obreiros, benemerência, etc.</small></article></div>
+            <div class="mictmr-advantages"><p class="eyebrow">Vantagens Exclusivas</p><div><article class="card">Consultoria GRATUITA para abertura de CNPJ da loja</article><article class="card">Duas pesquisas gratuitas ao sistema Zenith de Sindicância Digital<button class="button button-ghost" type="button" data-config-link="sindicanciaUrl">Acessar Sindicância Digital <span aria-hidden="true">→</span></button></article><a class="card" href="#fundo-benemerencia">Participação no Fundo de Benemerência Zenith <span aria-hidden="true">→</span></a></div></div>
+            <div class="mictmr-prices"><article class="card"><span>Com CNPJ</span><strong>R$ 59,90</strong><a class="button button-primary" href="#form-mictmr">Abrir conta com CNPJ</a></article><article class="card"><span>Sem CNPJ</span><strong>R$ 119,90</strong><a class="button button-primary" href="#form-mictmr">Abrir conta sem CNPJ</a></article></div>
+            <div class="mictmr-maintenance"><span>Taxa de manutenção</span><strong>R$ 49,90 mensais</strong></div>
+            <aside id="fundo-benemerencia" class="mictmr-fund" data-reveal><p class="eyebrow">Fundo de Benemerência Zenith</p><h4>30% da taxa de manutenção será depositado no fundo de benemerência Zenith.</h4><p>O valor total será sorteado entre as lojas participantes de 3 em 3 meses.</p></aside>
+          </section>
+
+          <section id="mictmr-potencia" class="mictmr-subsection mictmr-potencia" aria-labelledby="potencia-title">
+            <!-- ATENÇÃO: TEXTO DO BANNER PENDENTE DE CONFIRMAÇÃO DO CLIENTE. Edite ZENITH_CONFIG.potenciaHeadline. -->
+            <div class="mictmr-potencia__banner" data-potencia-headline data-reveal>Sua Potência recebe per captas e mútuas?</div>
+            <div class="mictmr-subsection__intro"><p class="eyebrow">MICTMR • Potência</p><h3 id="potencia-title" class="heading heading--section">A Zenith veio para te ajudar a automatizar todo processo de recebimento</h3></div>
+            <!-- IMAGEM EDITÁVEL: MICTMR POTÊNCIA. PLACEHOLDER EM CSS: substituir por assets/images/mictmr/mictmr-potencia.webp quando disponível. -->
+            <div class="mictmr-feature-grid"><article class="card"><strong>Abertura de contas em nome das lojas</strong><small>com ou sem CNPJ</small></article><article class="card"><strong>Extrato completo e detalhado</strong><small>para auditoria</small></article><article class="card"><strong>Recebimento automático de per captas e mútuas</strong><small>split</small></article><article class="card"><strong>Toda a estrutura de pagamento e recebimento</strong><small>Pix, boletos e transferências</small></article></div>
+            <div class="mictmr-advantages"><p class="eyebrow">Vantagens</p><div><article class="card">Consultoria GRATUITA para abertura de CNPJ de lojas</article><article class="card">Duas pesquisas gratuitas ao sistema Zenith de Sindicância Digital<button class="button button-ghost" type="button" data-config-link="sindicanciaUrl">Acessar Sindicância Digital <span aria-hidden="true">→</span></button></article></div></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="servicos" class="services section" aria-labelledby="services-title">
+        <div class="container">
+          <div class="services__hero section-banner section-banner--solutions">
+            <div class="container">
+              <div class="section-banner__content" data-reveal><p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> Soluções Zenith</p><h2 id="services-title" class="heading heading--section">Serviços que vão mudar sua vida!</h2><p>Do dia a dia financeiro aos grandes planos, encontre soluções para cuidar do seu dinheiro, proteger o que importa e realizar seus projetos.</p></div>
+            </div>
+          </div>
+
+          <section class="services-block" aria-labelledby="payments-title">
+            <div class="services-block__heading"><p class="eyebrow">Conta &amp; Pagamentos</p><h3 id="payments-title" class="heading">Soluções para acompanhar seu dia a dia financeiro.</h3></div>
+            <div class="services-grid services-grid--six">
+              <article class="card service-card"><h4>Abertura de contas</h4><p>Tenha uma conta para organizar sua vida financeira.</p></article><article class="card service-card"><h4>Pix rápido e prático</h4><p>Faça seus pagamentos e transferências via Pix.</p></article><article class="card service-card"><h4>Controle financeiro</h4><p>Tenha mais organização para acompanhar sua vida financeira.</p></article><article class="card service-card"><h4>Split de pagamentos</h4><p>Organize recebimentos e pagamentos através do split.</p></article><article class="card service-card"><h4>Máquinas de cartão</h4><p>Soluções para receber pagamentos com cartão.</p></article><article class="card service-card"><h4>Compra e venda de Crypto Moedas</h4><p>Compre e venda Crypto Moedas utilizando o saldo de sua conta.</p></article></div>
+            <div class="services-highlights"><article class="services-highlight services-highlight--credit"><p class="eyebrow">Crédito emergencial</p><strong>Crédito emergencial em até 24h</strong></article><article class="services-highlight"><p class="eyebrow">Empréstimo por cartão de crédito</p><strong>Empréstimo imediato por cartão de crédito.</strong><button class="button button-primary" type="button" data-gyroo-loan>Contratar empréstimo <span aria-hidden="true">→</span></button></article></div>
+          </section>
+
+          <section class="services-block services-protection" aria-labelledby="protection-title">
+            <!-- IMAGEM EDITÁVEL: SEGUROS. PLACEHOLDER EM CSS: substituir por assets/images/servicos/seguros.webp quando disponível. -->
+            <div class="services-block__heading"><p class="eyebrow">Proteção</p><h3 id="protection-title" class="heading">Mais segurança para você e sua família!</h3></div>
+            <div class="services-grid services-grid--four"><article class="card service-card"><h4>Seguro de vida</h4><p>Proteção para você e sua família.</p><a href="#form-servicos">Falar com especialista →</a></article><article class="card service-card"><h4>Seguro residencial</h4><p>Proteção para o seu lar.</p><a href="#form-servicos">Falar com especialista →</a></article><article class="card service-card"><h4>Seguro de automóveis</h4><p>Proteção para o seu veículo.</p><a href="#form-servicos">Falar com especialista →</a></article><article class="card service-card"><h4>Seguro empresarial</h4><p>Proteção para sua empresa.</p><a href="#form-servicos">Falar com especialista →</a></article></div>
+          </section>
+
+          <section class="services-block" aria-labelledby="credit-title">
+            <!-- IMAGEM EDITÁVEL: CRÉDITO. PLACEHOLDER EM CSS: substituir por assets/images/servicos/credito.webp quando disponível. -->
+            <div class="services-block__heading"><p class="eyebrow">Crédito</p><h3 id="credit-title" class="heading">Precisa de mais crédito?</h3></div>
+            <div class="services-grid services-grid--three"><article class="card service-card"><h4>Crédito Consignado</h4><p>Para aposentados e pensionistas.</p><a href="#form-servicos">Falar com especialista →</a></article><article class="card service-card"><h4>Crédito do Trabalhador</h4><p>Soluções de crédito para o trabalhador.</p><a href="#form-servicos">Falar com especialista →</a></article><article class="card service-card"><h4>Crédito Pessoal</h4><p>Soluções de crédito pessoal.</p><a href="#form-servicos">Falar com especialista →</a></article></div>
+          </section>
+
+          <section class="services-block services-dreams" aria-labelledby="dreams-title">
+            <!-- IMAGEM EDITÁVEL: FINANCIAMENTOS. PLACEHOLDER EM CSS: substituir por assets/images/servicos/financiamentos.webp quando disponível. -->
+            <!-- IMAGEM EDITÁVEL: CONSÓRCIOS. PLACEHOLDER EM CSS: substituir por assets/images/servicos/consorcios.webp quando disponível. -->
+            <div class="services-block__heading"><p class="eyebrow">Financiamentos &amp; Consórcios</p><h3 id="dreams-title" class="heading">A Zenith ajuda você a realizar seus sonhos!</h3></div>
+            <div class="services-dreams__columns"><div><h4>Financiamentos</h4><ul><li>Financiamento de veículos leves e pesados</li><li>Financiamento de imóveis residenciais e comerciais</li><li>Financiamento para construção</li></ul></div><div><h4>Consórcios</h4><ul><li>Consórcio de automóveis</li><li>Consórcio imobiliário</li><li>Consórcio para educação e viagens</li><li>Consórcio para estética e procedimentos cirúrgicos</li></ul></div></div>
+            <a class="button button-secondary" href="#form-servicos">Fale com nossos especialistas <span aria-hidden="true">→</span></a>
+          </section>
+
+          <section class="services-block services-health" aria-labelledby="health-title">
+            <!-- IMAGEM EDITÁVEL: SAÚDE. PLACEHOLDER EM CSS: substituir por assets/images/servicos/saude.webp quando disponível. -->
+            <div class="services-block__heading"><p class="eyebrow">Saúde</p><h3 id="health-title" class="heading">Não vamos esquecer de nossa saúde!</h3><p>Conte com a gente para contratar o melhor plano de saúde individual, familiar, empresarial ou Pet.</p></div>
+            <ul class="services-health__list"><li>Individual</li><li>Familiar</li><li>Empresarial</li><li>Pet</li></ul>
+            <a class="button button-secondary" href="#form-servicos">Falar com especialista <span aria-hidden="true">→</span></a>
+          </section>
+
+          <div class="services-final" data-reveal><p class="eyebrow">Precisa de ajuda para escolher?</p><h3 class="heading">Fale com nossos especialistas.</h3><p>Conte o que você precisa e encontre a solução mais adequada dentro das opções da Zenith.</p><a class="button button-primary" href="#form-servicos">Fale com nossos especialistas <span aria-hidden="true">→</span></a></div>
+        </div>
+      </section>
+
+      <section id="form-pessoa-fisica" class="pf-form-section section" aria-labelledby="pf-form-title">
+        <div class="container"><div class="pf-form-layout">
+          <aside class="pf-form-aside"><p class="eyebrow">Zenith • Pessoa Física</p><h2 id="pf-form-title" class="heading heading--section">Abra sua conta e encontre a solução ideal para você.</h2><p>Preencha seus dados e selecione os serviços que deseja conhecer ou contratar.</p><strong>Uma Zenith, um pensamento, VOCÊ!</strong></aside>
+          <form class="pf-form" novalidate data-pf-form>
+            <ol class="form-stepper" aria-label="Etapas do formulário"><li class="is-current">01 <span>Dados</span></li><li>02 <span>Contato</span></li><li>03 <span>Serviços</span></li><li>04 <span>Revisão</span></li></ol>
+            <div class="form-step" data-step="1"><fieldset><legend>Seus dados</legend><div class="form-grid"><div class="form-group form-group--full"><label for="pf-name">Nome completo</label><input id="pf-name" name="nomeCompleto" autocomplete="name" placeholder="Digite seu nome completo" required><small>Sem abreviações</small><span class="field-error"></span></div><div class="form-group"><label for="pf-cpf">CPF</label><input id="pf-cpf" name="cpf" inputmode="numeric" placeholder="000.000.000-00" required><span class="field-error"></span></div><div class="form-group"><label for="pf-birth">Data de nascimento</label><input id="pf-birth" name="dataNascimento" type="date" required><span class="field-error"></span></div></div><fieldset class="choice-group"><legend>Sexo</legend><label><input name="sexo" type="radio" value="Masculino" required> Masculino</label><label><input name="sexo" type="radio" value="Feminino"> Feminino</label><label><input name="sexo" type="radio" value="Outro"> Outro</label><span class="field-error"></span></fieldset></fieldset></div>
+            <div class="form-step" data-step="2" hidden><fieldset><legend>Contato e endereço</legend><fieldset class="choice-group"><legend>Estado civil</legend><label><input name="estadoCivil" type="radio" value="Solteiro(a)" required> Solteiro(a)</label><label><input name="estadoCivil" type="radio" value="Casado(a)"> Casado(a)</label><label><input name="estadoCivil" type="radio" value="Divorciado(a)"> Divorciado(a)</label><label><input name="estadoCivil" type="radio" value="Viúvo(a)"> Viúvo(a)</label><label><input name="estadoCivil" type="radio" value="União Estável"> União Estável</label><span class="field-error"></span></fieldset><div class="form-grid"><div class="form-group"><label for="pf-phone">Telefone celular</label><input id="pf-phone" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required><span class="field-error"></span></div><div class="form-group"><label for="pf-email">E-mail principal</label><input id="pf-email" name="email" autocomplete="email" type="email" placeholder="seuemail@exemplo.com" required><span class="field-error"></span></div><div class="form-group"><label for="pf-cep">CEP</label><input id="pf-cep" name="cep" autocomplete="postal-code" inputmode="numeric" placeholder="00000-000" required><span class="field-error"></span></div><div class="form-group"><label for="pf-street">Rua</label><input id="pf-street" name="rua" autocomplete="street-address" required><span class="field-error"></span></div><div class="form-group"><label for="pf-number">N°</label><input id="pf-number" name="numero" required><span class="field-error"></span></div><div class="form-group"><label for="pf-city">Cidade</label><input id="pf-city" name="cidade" required><span class="field-error"></span></div><div class="form-group"><label for="pf-state">Estado</label><select id="pf-state" name="estado" required><option value="">Selecione</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select><span class="field-error"></span></div><div class="form-group"><label for="pf-job">Profissão</label><input id="pf-job" name="profissao" placeholder="Digite sua profissão" required><span class="field-error"></span></div><div class="form-group"><label for="pf-income">Renda mensal (R$)</label><input id="pf-income" name="rendaMensal" inputmode="numeric" placeholder="R$ 0,00" required><span class="field-error"></span></div></div></fieldset></div>
+            <div class="form-step" data-step="3" hidden><fieldset><legend>Como podemos ajudar?</legend><p>Selecione quantos serviços quiser.</p><p class="selection-count" aria-live="polite">0 serviços selecionados</p><div class="service-options" data-service-options></div></fieldset></div>
+            <div class="form-step" data-step="4" hidden><fieldset><legend>Confira seus dados</legend><div class="form-review" data-form-review></div></fieldset></div>
+            <div class="form-actions"><button class="button button-ghost" type="button" data-form-back hidden>Voltar</button><button class="button button-primary" type="button" data-form-next>Continuar <span aria-hidden="true">→</span></button><button class="button button-primary" type="submit" data-form-submit hidden></button></div>
+            <div class="form-success" hidden aria-live="polite"><span>✓</span><h3 class="heading">Cadastro recebido!</h3><p>Em breve, um especialista da Zenith entrará em contato.</p><a class="button button-primary" href="#topo">Voltar para a página</a></div>
+          </form>
+        </div></div>
+      </section>
+
+      <section id="form-pessoa-juridica" class="pf-form-section pf-form-section--pj section" aria-labelledby="pj-form-title"><div class="container"><div class="pf-form-layout">
+        <aside class="pf-form-aside pj-form-aside"><p class="eyebrow">Zenith • Pessoa Jurídica</p><h2 id="pj-form-title" class="heading heading--section">Uma estrutura financeira à altura do seu negócio.</h2><p>Conte com a Zenith para organizar sua estrutura financeira e encontrar soluções para sua empresa.</p><strong>Seu negócio merece uma Zenith.</strong></aside>
+        <form class="pf-form form-theme-pj" novalidate data-pj-form><ol class="form-stepper" aria-label="Etapas do formulário"><li class="is-current">01 <span>Responsável</span></li><li>02 <span>Empresa</span></li><li>03 <span>Endereço</span></li><li>04 <span>Serviços</span></li><li>05 <span>Revisão</span></li></ol>
+          <div class="form-step" data-pj-step="1"><fieldset><legend>Dados do responsável</legend><p class="form-intro">Informe os dados da pessoa responsável pelo negócio.</p><div class="form-grid"><div class="form-group form-group--full"><label>Nome completo<input name="pjNome" autocomplete="name" placeholder="Digite seu nome completo" required></label><small>Sem abreviações</small><span class="field-error"></span></div><div class="form-group"><label>CPF<input name="pjCpf" inputmode="numeric" placeholder="000.000.000-00" required></label><span class="field-error"></span></div><div class="form-group"><label>Data de nascimento<input name="pjNascimento" type="date" required></label><span class="field-error"></span></div><div class="form-group"><label>Telefone celular<input name="pjTelefone" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required></label><span class="field-error"></span></div><div class="form-group"><label>E-mail principal<input name="pjEmail" autocomplete="email" type="email" placeholder="seuemail@empresa.com.br" required></label><span class="field-error"></span></div><div class="form-group"><label>Profissão<input name="pjProfissao" placeholder="Digite sua profissão" required></label><span class="field-error"></span></div><div class="form-group"><label>Renda mensal (R$)<input name="pjRenda" inputmode="numeric" placeholder="R$ 0,00" required></label><span class="field-error"></span></div></div><fieldset class="choice-group"><legend>Sexo</legend><label><input name="pjSexo" type="radio" value="Masculino" required> Masculino</label><label><input name="pjSexo" type="radio" value="Feminino"> Feminino</label><label><input name="pjSexo" type="radio" value="Outro"> Outro</label></fieldset><div class="form-group"><label>Estado civil<select name="pjEstadoCivil" required><option value="">Selecione</option><option>Solteiro(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viúvo(a)</option><option>União Estável</option></select></label><span class="field-error"></span></div></fieldset></div>
+          <div class="form-step" data-pj-step="2" hidden><fieldset><legend>Dados da empresa</legend><p class="form-intro">Agora vamos conhecer um pouco melhor sua empresa.</p><div class="form-grid"><div class="form-group"><label>Razão Social<input name="razaoSocial" placeholder="Razão social da empresa" required></label><span class="field-error"></span></div><div class="form-group"><label>Nome Fantasia<input name="nomeFantasia" placeholder="Nome fantasia" required></label><span class="field-error"></span></div><div class="form-group"><label>CNPJ<input name="cnpj" inputmode="numeric" placeholder="00.000.000/0000-00" required></label><span class="field-error"></span></div><div class="form-group"><label>Faturamento anual<input name="faturamento" inputmode="numeric" placeholder="R$ 0,00" required></label><span class="field-error"></span></div><div class="form-group form-group--full"><label>Segmento de atuação<input name="segmento" placeholder="Ex.: comércio, serviços, indústria..." required></label><span class="field-error"></span></div><div class="form-group form-group--full"><label>Descrição do negócio<textarea name="descricao" placeholder="Conte brevemente sobre sua empresa." required></textarea></label><span class="field-error"></span></div></div></fieldset></div>
+          <div class="form-step" data-pj-step="3" hidden><fieldset><legend>Endereço empresarial</legend><div class="form-grid"><div class="form-group"><label>CEP<input name="pjCep" autocomplete="postal-code" inputmode="numeric" placeholder="00000-000" required></label><span class="field-error"></span></div><div class="form-group"><label>Rua<input name="pjRua" autocomplete="street-address" required></label><span class="field-error"></span></div><div class="form-group"><label>N°<input name="pjNumero" required></label><span class="field-error"></span></div><div class="form-group"><label>Cidade<input name="pjCidade" required></label><span class="field-error"></span></div><div class="form-group"><label>Estado<select name="pjEstado" required><option value="">Selecione</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select></label><span class="field-error"></span></div></div></fieldset></div>
+          <div class="form-step" data-pj-step="4" hidden><fieldset><legend>Como podemos ajudar sua empresa?</legend><p>Selecione quantos serviços quiser.</p><p class="selection-count" aria-live="polite">0 serviços selecionados</p><div class="service-options" data-pj-services></div></fieldset></div><div class="form-step" data-pj-step="5" hidden><fieldset><legend>Revise suas informações</legend><div class="form-review" data-pj-review></div></fieldset></div><div class="form-actions"><button class="button button-ghost" type="button" data-pj-back hidden>Voltar</button><button class="button button-primary" type="button" data-pj-next>Continuar →</button><button class="button button-primary" type="submit" data-pj-submit hidden></button></div><div class="form-success" hidden aria-live="polite"><span>✓</span><h3 class="heading">Cadastro recebido!</h3><p>Em breve, um especialista da Zenith entrará em contato.</p><a class="button button-primary" href="#topo">Voltar para a página</a></div>
+        </form></div></div></section>
+      <section id="form-mictmr" class="mictmr-form-section section" aria-labelledby="mictmr-form-title"><div class="container"><form class="mictmr-form" data-mictmr-form novalidate><p class="eyebrow">Conta MICTMR</p><h2 id="mictmr-form-title" class="heading heading--section">Faça parte da estrutura ZENITH</h2><p>Escolha seu perfil e avance para configurar seu cadastro MICTMR.</p><ol class="form-stepper"><li class="is-current">01 <span>Perfil</span></li><li>02 <span>Dados</span></li><li>03 <span>Revisão</span></li></ol><div data-mf-step="1"><fieldset><legend>Qual é o seu perfil?</legend><div class="mictmr-profile-options"><label><input type="radio" name="perfil" value="Obreiro" required><span>Obreiro</span></label><label><input type="radio" name="perfil" value="Loja"><span>Loja</span></label><label><input type="radio" name="perfil" value="Potência"><span>Potência</span></label><label><input type="radio" name="perfil" value="Venerável Mestre"><span>Venerável Mestre</span></label></div></fieldset></div><div data-mf-step="2" hidden><fieldset><legend>Dados do cadastro</legend><div class="form-grid"><div class="form-group form-group--full"><label>Nome completo<input name="nome" autocomplete="name" required></label></div><div class="form-group"><label>CPF<input name="cpf" inputmode="numeric" placeholder="000.000.000-00" required></label></div><div class="form-group"><label>Telefone<input name="telefone" autocomplete="tel" placeholder="(00) 00000-0000" required></label></div><div class="form-group form-group--full"><label>E-mail<input name="email" autocomplete="email" type="email" required></label></div></div></fieldset></div><div data-mf-step="3" hidden><fieldset><legend>Revisão</legend><div class="form-review" data-mf-review></div></fieldset></div><div class="form-actions"><button class="button button-ghost" type="button" data-mf-back hidden>Voltar</button><button class="button button-primary" type="button" data-mf-next>Continuar</button><button class="button button-primary" type="submit" data-mf-submit hidden>Confirmar e enviar</button></div><div class="form-success" hidden><span>✓</span><h3 class="heading">Cadastro recebido!</h3><p>Suas informações foram preenchidas com sucesso.</p><a class="button button-primary" href="#topo">Voltar para a Zenith</a></div></form></div></section>
+      <section id="cta-final" class="cta-final section" aria-labelledby="cta-final-title">
+        <div class="container">
+          <div class="cta-final__content" data-reveal>
+            <div class="cta-final__copy">
+              <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> Próximo passo</p>
+              <h2 id="cta-final-title" class="heading heading--section">Chegou a hora de colocar seus planos em movimento.</h2>
+              <p>Conte com especialistas para encontrar as soluções financeiras que fazem sentido para você ou para sua empresa.</p>
+              <div class="cta-final__actions">
+                <a class="button button-primary" href="#form-servicos" data-contact-link>Falar com um especialista <span aria-hidden="true">→</span></a>
+                <a class="button button-secondary" href="#servicos">Conhecer nossas soluções <span aria-hidden="true">↓</span></a>
+              </div>
+              <p class="cta-final__trust">Atendimento personalizado para encontrar a solução adequada ao seu momento.</p>
+            </div>
+            <!-- IMAGEM EDITÁVEL: imagem principal da seção CTA final. Substituir o placeholder por assets/images/cta-final/cta-main.webp quando disponível. -->
+            <div class="cta-final__visual" aria-hidden="true"><span class="cta-final__orb"></span><span class="cta-final__mark">ZENITH</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="whatsapp-float" href="#form-servicos" data-whatsapp-float aria-label="Falar com a Zenith pelo WhatsApp" title="Falar pelo WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M27.2 4.7A15.2 15.2 0 0 0 2.7 22.5L1 31l8.7-1.7A15.2 15.2 0 1 0 27.2 4.7ZM16 28a12 12 0 0 1-6.1-1.7l-.6-.4-5.2 1 1-5.1-.4-.7A12 12 0 1 1 16 28Zm6.6-9c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.7-.2-1 .2-.3.4-1 1.3-1.2 1.6-.2.3-.5.3-.9.1-2.4-1.2-4-2.2-5.6-5-.4-.7.4-.7 1.1-2 .1-.2.1-.6 0-.8l-1.3-3c-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.8.1-1.2.6-.4.5-1.6 1.5-1.6 3.8 0 2.2 1.6 4.4 1.8 4.7.2.3 3.2 4.9 7.8 6.9 2.9 1.2 4 .9 4.7.8.9-.1 2.4-1 2.7-2 .3-1 .3-1.9.2-2.1-.1-.2-.4-.3-.8-.5Z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+
+    <script src="js/config.js?v=20260915"></script>
+    <script src="js/navigation.js?v=20260915"></script>
+    <script src="js/animations.js?v=20260915"></script>
+    <script src="js/forms.js?v=20260915"></script>
+    <script src="js/main.js?v=20260915b"></script>
+  </body>
+</html>

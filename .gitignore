@@ -1,0 +1,24 @@
+# Artefatos de build e dependências locais
+node_modules/
+dist/
+
+# Configurações e credenciais locais
+.env
+.env.*
+!.env.example
+
+# Arquivos temporários e do sistema operacional
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+*.log
+
+# IDEs e ferramentas locais
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Materiais internos de desenvolvimento
+backups/

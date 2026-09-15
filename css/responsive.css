@@ -1,0 +1,86 @@
+@media (min-width: 48rem) {
+  .section-banner { min-height: clamp(33rem, 48vw, 39rem); }
+  .section-banner--support { min-height: clamp(27rem, 35vw, 32rem); }
+  .section-banner--pf, .section-banner--pj { background-position: 71% center; }
+  .section-banner--mictmr { background-position: 66% center; }
+  .section-banner--solutions { background-position: 67% center; }
+  .section-banner--support { background-position: 74% center; }
+  .container { width: min(100% - 4rem, var(--container-width)); }
+  .section { padding-block: var(--space-section); }
+  .site-header__content { gap: var(--space-lg); }
+  .menu-toggle { display: none; }
+  .site-nav { display: block; }
+  .site-nav__list { display: flex; align-items: center; gap: .1rem; }
+  .site-nav__list a { padding: var(--space-sm); font-size: .75rem; }
+  .site-header__cta { display: inline-flex; white-space: nowrap; }
+  .hero__grid { grid-template-columns: minmax(0, 1fr) minmax(16rem, .78fr); gap: var(--space-lg); }
+  .hero-benefits__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .card--benefit { min-height: 5rem; font-size: .8125rem; }
+  .profiles__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .personal-solutions__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .partners__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .business-products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .business-rates__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mictmr__selector { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .mictmr-benefits, .mictmr-feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mictmr-prices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services-grid--six, .services-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services-grid--three, .services-dreams__columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services-highlights { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.form-group--full { grid-column:1 / -1; }.service-options { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+
+@media (max-width: 30rem) {
+  .whatsapp-float { width: 3.5rem; padding: .6rem; justify-content: center; }
+  .whatsapp-float span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
+@media (min-width: 64rem) {
+  .section-banner { min-height: clamp(36rem, 45vw, 42rem); }
+  .section-banner--support { min-height: clamp(29rem, 33vw, 34rem); }
+  .section-banner--support .section-banner__content { flex-direction: row; align-items: center; justify-content: space-between; }
+  .site-nav__list { gap: var(--space-xs); }
+  .site-nav__list a { padding-inline: var(--space-sm); font-size: var(--font-size-small); }
+  .hero__grid { grid-template-columns: minmax(0, 1.06fr) minmax(25rem, .94fr); gap: clamp(2rem, 6vw, 6rem); }
+  .hero-visual__image { width: min(100%, 30rem); }
+  .hero__actions { margin-top: var(--space-xl); }
+  .profiles__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-lg); }
+  .personal-solutions__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .solution-card--loan { grid-column: span 2; }
+  .loan-highlight { flex-direction: row; align-items: center; }
+  .consulting { display: grid; grid-template-columns: minmax(0, .9fr) minmax(30rem, 1.1fr); gap: var(--space-2xl); }
+  .consulting__categories { margin-top: 0; }
+  .partners__grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .product-card { grid-template-columns: .8fr 1.2fr; }
+  .business-rates { grid-template-columns: .8fr 1.2fr; align-items: center; }
+  .business-credit { flex-direction: row; align-items: center; }
+  .mictmr-benefits { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .mictmr-feature-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .mictmr-advantages > div { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .mictmr-prices { max-width: 44rem; }
+  .mictmr-contact { flex-direction: row; align-items: center; justify-content: space-between; }
+  .services-grid--six { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .services-grid--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .services-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .services-dreams__columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services-final { flex-direction: row; align-items: center; justify-content: space-between; }
+  .services-final > p { max-width: 35rem; }
+  .cta-final__content { grid-template-columns: minmax(0, 1fr) minmax(17rem, .55fr); align-items: center; }
+  .cta-final__visual { position: relative; right: auto; bottom: auto; width: 100%; justify-self: end; }
+  .pf-form-layout { grid-template-columns:minmax(16rem,.7fr) minmax(0,1.3fr); align-items:start; }.pf-form-aside { position:sticky; top:6rem; }.service-options { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+
+@media (min-width: 80rem) {
+  .site-nav__list a { padding-inline: var(--space-md); }
+}
+
+@media (min-width: 90rem) {
+  .section-banner { min-height: clamp(39rem, 39vw, 46rem); }
+  .section-banner--support { min-height: 36rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  .hero__video { display: none; }
+  [data-reveal] { opacity: 1; transform: none; }
+}

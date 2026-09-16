@@ -7,6 +7,7 @@ const runtimeDirectories = ["css", "js"];
 const runtimeAssets = [
   "assets/favicon/zenith-favicon.png",
   "assets/images/logo/zenith-logo.png",
+  "assets/images/mictmr/mictmr-form-background.png",
   "assets/images/icons/pix.svg",
   "assets/images/icons/deposit.svg",
   "assets/images/icons/payment.svg",

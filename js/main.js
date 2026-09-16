@@ -8,31 +8,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const syncHeader = () => header?.classList.toggle("is-scrolled", window.scrollY > 12);
   syncHeader();
   window.addEventListener("scroll", syncHeader, { passive: true });
+  const openExternal = (url) => window.open(url, "_blank", "noopener,noreferrer");
+  const setExternalAnchor = (link, url) => {
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  };
   document.querySelectorAll("[data-gyroo-loan]").forEach((button) => {
     button.addEventListener("click", () => {
-      // A URL é institucional e deve ser definida em js/config.js antes da publicação.
-      if (window.ZENITH_CONFIG?.gyrooLoanUrl) window.location.assign(window.ZENITH_CONFIG.gyrooLoanUrl);
+      const url = window.ZENITH_CONFIG?.gyrooLoanUrl;
+      if (url) openExternal(url);
     });
   });
   document.querySelectorAll("[data-config-link]").forEach((button) => {
     button.addEventListener("click", () => {
       const key = button.dataset.configLink;
       const url = key && window.ZENITH_CONFIG?.[key];
-      // A URL é institucional e só navega após configuração em js/config.js.
-      if (url) window.location.assign(url);
+      if (url) openExternal(url);
     });
   });
   document.querySelectorAll("[data-contact-link]").forEach((link) => {
     const contactUrl = window.ZENITH_CONFIG?.contactUrl;
-    // Sem URL institucional, o CTA mantém o caminho interno para o formulário de serviços.
-    link.setAttribute("href", contactUrl || "#form-servicos");
+    if (contactUrl) setExternalAnchor(link, contactUrl);
   });
   document.querySelectorAll("[data-whatsapp-float]").forEach((link) => {
     const value = window.ZENITH_CONFIG?.whatsapp?.trim();
     if (!value) return;
-    link.href = /^https?:\/\//i.test(value)
+    const url = /^https?:\/\//i.test(value)
       ? value
       : `https://wa.me/${value.replace(/\D/g, "")}`;
+    setExternalAnchor(link, url);
   });
   document.querySelectorAll("[data-potencia-headline]").forEach((element) => {
     if (window.ZENITH_CONFIG?.potenciaHeadline) element.textContent = window.ZENITH_CONFIG.potenciaHeadline;

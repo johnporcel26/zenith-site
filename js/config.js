@@ -4,7 +4,7 @@ const zenithWhatsAppUrl = "https://wa.me/5511973987760?text=Ol%C3%A1%21%20Vim%20
 window.ZENITH_CONFIG = Object.freeze({
   whatsapp: zenithWhatsAppUrl,
   contactUrl: zenithWhatsAppUrl,
-  gyrooLoanUrl: "https://card.gyroo.com.br/",
+  loanContactUrl: zenithWhatsAppUrl,
   sindicanciaUrl: "",
   mictmrContactUrl: zenithWhatsAppUrl,
   potenciaHeadline: "Sua Potência recebe per captas e mútuas?",

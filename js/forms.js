@@ -13,6 +13,47 @@ window.ZenithForms = (() => {
     const review=()=>{const data=new FormData(form);const labels={nomeCompleto:"Nome",cpf:"CPF",dataNascimento:"Data de nascimento",sexo:"Sexo",estadoCivil:"Estado civil",telefone:"Telefone",email:"E-mail",cep:"CEP",rua:"Rua",numero:"N°",cidade:"Cidade",estado:"Estado",profissao:"Profissão",rendaMensal:"Renda mensal"};const dataRows=Object.entries(labels).map(([k,l])=>`<div><span>${l}</span><strong>${data.get(k)||"—"}</strong></div>`).join("");const chosen=services.filter(([id])=>data.getAll("servicos").includes(id)).map(([,l])=>l).join(" • ")||"Nenhum serviço selecionado";form.querySelector("[data-form-review]").innerHTML=`${dataRows}<div class="form-review__services"><span>Serviços de interesse</span><strong>${chosen}</strong></div>`;};
     form.addEventListener("input",event=>clear(event.target));form.querySelector("[data-form-next]").addEventListener("click",()=>{if(validate())setStep(step+1);});form.querySelector("[data-form-back]").addEventListener("click",()=>setStep(step-1));form.addEventListener("submit",e=>{e.preventDefault();if(!validate())return;form.querySelectorAll(".form-step,.form-stepper,.form-actions").forEach(x=>x.hidden=true);form.querySelector(".form-success").hidden=false;});form.querySelector("[data-form-submit]").textContent=window.ZENITH_FORM_CONFIG?.pfSubmitLabel||"ENVIAR MEU CADASTRO"; };
   const initPJ=()=>{const f=document.querySelector('[data-pj-form]');if(!f)return;const a=['Empréstimo imediato por cartão de crédito','Seguro de Vida','Seguro residencial','Seguro de automóveis','Seguro empresarial','Crédito Pessoal','Financiamento de veículos leves e pesados','Financiamento de imóveis residenciais e comerciais','Financiamento para construção','Consórcio de automóveis','Consórcio imobiliário','Consórcio para educação e viagens','Consórcio para estética e procedimentos cirúrgicos'];let n=1,s=[...f.querySelectorAll('[data-pj-step]')],go=x=>{n=x;s.forEach(e=>e.hidden=+e.dataset.pjStep!==n);f.querySelectorAll('.form-stepper li').forEach((e,i)=>e.classList.toggle('is-current',i===n-1));f.querySelector('[data-pj-back]').hidden=n===1;f.querySelector('[data-pj-next]').hidden=n===5;f.querySelector('[data-pj-submit]').hidden=n!==5;};let b=f.querySelector('[data-pj-services]');b.innerHTML=a.map((x,i)=>`<label class="service-option"><input type="checkbox" name="pjServices" value="pj-${i}"><span>${x}</span></label>`).join('');b.onchange=()=>{let c=f.querySelectorAll('[name="pjServices"]:checked').length;f.querySelector('.selection-count').textContent=`${c} serviço${c===1?'':'s'} selecionado${c===1?'':'s'}`};let ok=()=>{let q=[...s[n-1].querySelectorAll('[required]')].find(e=>e.type==='radio'?!f.querySelector(`[name="${e.name}"]:checked`):!e.value);if(q){q.focus();q.setAttribute('aria-invalid','true');return false}return true};f.querySelector('[data-pj-next]').onclick=()=>{if(ok())go(n+1)};f.querySelector('[data-pj-back]').onclick=()=>go(n-1);f.querySelector('[data-pj-submit]').textContent=window.ZENITH_FORM_CONFIG?.pjSubmitLabel||'ENVIAR CADASTRO DA EMPRESA';f.onsubmit=e=>{e.preventDefault();f.querySelectorAll('.form-step,.form-stepper,.form-actions').forEach(x=>x.hidden=true);f.querySelector('.form-success').hidden=false}};
-  const initMictmr=()=>{const f=document.querySelector('[data-mictmr-form]');if(!f)return;let n=1,s=[...f.querySelectorAll('[data-mf-step]')],go=x=>{n=x;s.forEach(e=>e.hidden=+e.dataset.mfStep!==n);f.querySelectorAll('.form-stepper li').forEach((e,i)=>e.classList.toggle('is-current',i===n-1));f.querySelector('[data-mf-back]').hidden=n===1;f.querySelector('[data-mf-next]').hidden=n===3;f.querySelector('[data-mf-submit]').hidden=n!==3;if(n===3){let d=new FormData(f);f.querySelector('[data-mf-review]').innerHTML=['perfil','nome','cpf','telefone','email'].map(k=>`<div><span>${k}</span><strong>${d.get(k)||'—'}</strong></div>`).join('')}};f.querySelector('[data-mf-next]').onclick=()=>{let bad=[...s[n-1].querySelectorAll('[required]')].find(e=>e.type==='radio'?!f.querySelector('[name="perfil"]:checked'):!e.value);if(bad){bad.focus();return}go(n+1)};f.querySelector('[data-mf-back]').onclick=()=>go(n-1);f.onsubmit=e=>{e.preventDefault();f.querySelectorAll('[data-mf-step],.form-stepper,.form-actions').forEach(x=>x.hidden=true);f.querySelector('.form-success').hidden=false}};
+  const initMictmr=()=>{
+    const form=document.querySelector('[data-mictmr-form]');
+    if(!form)return;
+    let step=1;
+    const steps=[...form.querySelectorAll('[data-mf-step]')];
+    const back=form.querySelector('[data-mf-back]');
+    const next=form.querySelector('[data-mf-next]');
+    const submit=form.querySelector('[data-mf-submit]');
+    const labels={perfil:'Perfil',nome:'Nome completo',dataNascimento:'Data de nascimento',cpf:'CPF',endereco:'Endereço',cep:'CEP',sexo:'Sexo',telefone:'Telefone',email:'E-mail',profissao:'Profissão',renda:'Renda mensal',potencia:'Potência',loja:'Loja'};
+    const fieldError=(element,message='')=>{const group=element.closest('.form-group, .choice-group, fieldset')||element.parentElement;const output=group.querySelector('.field-error');if(output)output.textContent=message;element.toggleAttribute('aria-invalid',Boolean(message));};
+    const isValid=(element)=>{
+      if(element.type==='radio')return Boolean(form.querySelector(`[name="${element.name}"]:checked`));
+      const value=element.value.trim();
+      if(!value)return false;
+      if(element.name==='cpf')return validCPF(value);
+      if(element.name==='cep')return digits(value).length===8;
+      if(element.name==='telefone')return digits(value).length===11;
+      if(element.name==='dataNascimento')return new Date(value)<=new Date();
+      if(element.type==='email')return element.validity.valid;
+      if(element.name==='renda')return digits(value).length>0;
+      return value.length>=2;
+    };
+    const requiredIn=(scope)=>[...scope.querySelectorAll('[required]')].filter((element,index,all)=>element.type!=='radio'||all.findIndex(item=>item.name===element.name)===index);
+    const validate=(scope,showErrors=false)=>{
+      let first;
+      requiredIn(scope).forEach(element=>{
+        const valid=isValid(element);
+        if(showErrors){let message='';if(!element.value&&!['radio'].includes(element.type))message='Este campo é obrigatório.';else if(element.type==='radio'&&!valid)message='Selecione uma opção.';else if(element.name==='cpf'&&!valid)message='Digite um CPF válido.';else if(element.name==='cep'&&!valid)message='Informe um CEP válido.';else if(element.name==='telefone'&&!valid)message='Informe um telefone com DDD.';else if(element.name==='dataNascimento'&&!valid)message='Informe uma data de nascimento válida.';else if(element.type==='email'&&!valid)message='Digite um e-mail válido.';fieldError(element,message);}
+        if(!valid)first??=element;
+      });
+      return {valid:!first,first};
+    };
+    const updateSubmit=()=>{const complete=validate(form,false).valid;submit.disabled=!complete;submit.setAttribute('aria-disabled',String(!complete));};
+    const renderReview=()=>{const data=new FormData(form);form.querySelector('[data-mf-review]').innerHTML=Object.entries(labels).map(([key,label])=>`<div><span>${label}</span><strong>${data.get(key)||'—'}</strong></div>`).join('');};
+    const go=(target)=>{step=target;steps.forEach(element=>element.hidden=+element.dataset.mfStep!==step);form.querySelectorAll('.form-stepper li').forEach((element,index)=>element.classList.toggle('is-current',index===step-1));back.hidden=step===1;next.hidden=step===3;submit.hidden=step!==3;if(step===3)renderReview();updateSubmit();};
+    form.addEventListener('input',(event)=>{const field=event.target;if(field.name==='cpf')field.value=mask(field.value,'cpf');if(field.name==='cep')field.value=mask(field.value,'cep');if(field.name==='telefone')field.value=mask(field.value,'phone');if(field.name==='renda'){const amount=digits(field.value);field.value=amount?new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(+amount/100):'';}fieldError(field);updateSubmit();});
+    form.addEventListener('change',(event)=>{fieldError(event.target);updateSubmit();});
+    next.onclick=()=>{const result=validate(steps[step-1],true);if(!result.valid){result.first.focus();return;}go(step+1);};
+    back.onclick=()=>go(step-1);
+    form.onsubmit=(event)=>{event.preventDefault();const result=validate(form,true);if(!result.valid){result.first.focus();updateSubmit();return;}const data=new FormData(form);const summary=['Olá! Vim pelo site da Zenith Serviços Financeiros e gostaria de enviar meu cadastro MICTMR.','',...Object.entries(labels).map(([key,label])=>`${label}: ${data.get(key)}`)].join('\n');const target=new URL(window.ZENITH_CONFIG?.whatsapp||'https://wa.me/5511973987760');target.searchParams.set('text',summary);window.open(target.toString(),'_blank','noopener,noreferrer');form.querySelectorAll('[data-mf-step],.form-stepper,.form-actions').forEach(element=>element.hidden=true);form.querySelector('.form-success').hidden=false;};
+    updateSubmit();
+  };
   return {init,initPJ,initMictmr};
 })();

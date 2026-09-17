@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     link.target = "_blank";
     link.rel = "noopener noreferrer";
   };
-  document.querySelectorAll("[data-gyroo-loan]").forEach((button) => {
+  document.querySelectorAll("[data-loan-contact]").forEach((button) => {
     button.addEventListener("click", () => {
-      const url = window.ZENITH_CONFIG?.gyrooLoanUrl;
+      const url = window.ZENITH_CONFIG?.loanContactUrl;
       if (url) openExternal(url);
     });
   });
